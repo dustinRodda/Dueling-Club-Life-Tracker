@@ -2737,14 +2737,14 @@ RectTransform:
   m_GameObject: {fileID: 323996585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99887395, y: 0.99887395, z: 0.99887395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965026910}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -316.2, y: 103.5}
+  m_AnchoredPosition: {x: -508.5, y: 105.3}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323996587
@@ -15925,8 +15925,8 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\nThese cards have more than one effect. \n\nOnly one of the effects may
-    be chosen when played.\n\nIf the chosen effect is marked with a    , you can play
-    it as a quick card."
+    be chosen when played.\n\nIf that effect is marked with\na     , you can play
+    the card as a quick card."
 --- !u!222 &1965026912
 CanvasRenderer:
   m_ObjectHideFlags: 0
