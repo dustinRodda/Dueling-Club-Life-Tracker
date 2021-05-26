@@ -7,9 +7,10 @@ public class PlayerInputPanel : MonoBehaviour
 {
     public GameObject lifeTotalPanel;
     public GameObject playerNamePrefab;
-    public List<InputField> playerNameInputs;
 
+    private List<InputField> playerNameInputs = new List<InputField>();
     private int numberOfPlayers;
+    private int[] yPositions = new int[] { -640, -940, -1240, -1540, -1840 };
 
     public void PlayerNumberButtonClicked(int playerNumber)
     {
@@ -18,7 +19,7 @@ public class PlayerInputPanel : MonoBehaviour
         for (int i = 0; i < numberOfPlayers; i++)
         {
             GameObject playerNameInput = Instantiate(playerNamePrefab, gameObject.transform);
-            playerNameInput.GetComponent<RectTransform>().localPosition = new Vector3(0, 600 - (i * 350), 0);
+            playerNameInput.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, yPositions[i], 0);
             playerNameInputs.Add(playerNameInput.transform.Find("InputField").GetComponent<InputField>());
         }
     }

@@ -12,6 +12,7 @@ public class PlayerLayout : MonoBehaviour
     private List<Player> players = new List<Player>();
     private List<string> playerNames = new List<string>();
     private int[][] positions;
+    private int[] widths;
     private int totalSeconds;
     private bool isTimerOn = false;
     private Color32[] backgroundColors;
@@ -32,12 +33,9 @@ public class PlayerLayout : MonoBehaviour
         backgroundColors[3] = new Color32(254, 180, 0, 255);
         backgroundColors[4] = new Color32(0, 0, 0, 255);
 
-        defaultNames = new string[5];
-        defaultNames[0] = "Harry";
-        defaultNames[1] = "Draco";
-        defaultNames[2] = "Luna";
-        defaultNames[3] = "Cedric";
-        defaultNames[4] = "Tom";
+        widths = new int[] { 500, 500, 250, 125};
+
+        defaultNames = new string[] { "Harry", "Draco", "Luna", "Cedric", "Tom" };
     }
 
     public void SetNumberOfPlayers(int number)
@@ -69,7 +67,9 @@ public class PlayerLayout : MonoBehaviour
     {
         GameObject playerObject = Instantiate(playerPrefab, transform);
         Player player = playerObject.GetComponent<Player>();
-        player.GetComponent<RectTransform>().localPosition = new Vector3(-175, positions[numberOfPlayers - 2][index], 0);
+        RectTransform playerRect = player.GetComponent<RectTransform>();
+        playerRect.localPosition = new Vector3(-175, positions[numberOfPlayers - 2][index], 0);
+        playerRect.sizeDelta = new Vector2(widths[numberOfPlayers - 2], 100);
         Image playerBackground = playerObject.transform.Find("Background").GetComponent<Image>();
         playerBackground.color = backgroundColors[index];
         player.Create(name);
