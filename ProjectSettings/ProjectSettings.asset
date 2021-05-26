@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Rodda Hazard Games
   productName: Dueling Club Life Tracker
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -162,6 +162,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.RoddaHazardGames.DCLT
     Standalone: com.Company.ProductName
+    iPhone: com.RoddaHazardGames.DCLT
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
